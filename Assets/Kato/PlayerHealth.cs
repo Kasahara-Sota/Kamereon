@@ -77,4 +77,31 @@ public class PlayerHealth : MonoBehaviour
             ModifyHealth(1);
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Green"))
+        {
+            _onGreen = false;
+        }
+        if (collision.gameObject.CompareTag("Red"))
+        {
+            _onRed = false;
+        }
+        if (collision.gameObject.CompareTag("Yellow"))
+        {
+            _onYellow = false;
+        }
+        if (collision.gameObject.CompareTag("Pink"))
+        {
+            _onPink = false;
+        }
+        if (collision.gameObject.CompareTag("Blue"))
+        {
+            _onBlue = false;
+        }
+        if (collision.gameObject.CompareTag("White"))
+        {
+            _onWhite = false;
+        }
+    }
 }
