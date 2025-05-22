@@ -20,7 +20,8 @@ public class PlayerHealth : MonoBehaviour
     }
     public void ModifyHealth(int amount)
     {
-        if(health <= 0)
+        health -= amount;
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
@@ -30,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Light"))
         {
-            health -= 1;
+            ModifyHealth(1);
         }
     }
 }
