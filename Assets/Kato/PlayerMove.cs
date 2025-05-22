@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D _rb;
 
     [SerializeField]
-    private float _playermovespeed;
+    private float _playerMoveSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,6 @@ public class PlayerMove : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         Vector2 velocity = new Vector2(h, v);
-        _rb.velocity = velocity * _playermovespeed * Time.deltaTime;
+        _rb.velocity = velocity * _playerMoveSpeed;
     }
 }

@@ -21,12 +21,12 @@ public class ColorChange : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _index = (_index + 1) % 3;
+            _index = (_index + 1) % _colorArray.Length;
             _spriteRenderer.color = _colorArray[_index];
         }
         if (Input.GetMouseButtonDown(1))
         {
-            _index = (_index - 1 + _colorArray.Length) % 3;
+            _index = (_index - 1 + _colorArray.Length) % _colorArray.Length;
             _spriteRenderer.color = _colorArray[_index];
         }
     }
