@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     bool _onPink;
     bool _onBlue;
     bool _onWhite;
+    bool _onGreen;
     
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,11 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Red"))
+        if (collision.gameObject.CompareTag("Green"))
+        {
+            _onGreen = true;
+        }
+        if (collision.gameObject.CompareTag("Red"))
         {
             _onRed = true;
         }
@@ -58,23 +63,27 @@ public class PlayerHealth : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Light"))
         {
-            if (_onRed && colorChange.ColorNumber == 0)
+            if (_onGreen && colorChange.ColorNumber == 0)
             {
                 return;
             }
-            if (_onYellow && colorChange.ColorNumber == 1)
+            if (_onRed && colorChange.ColorNumber == 1)
             {
                 return;
             }
-            if (_onPink && colorChange.ColorNumber == 2)
+            if (_onYellow && colorChange.ColorNumber == 2)
             {
                 return;
             }
-            if (_onBlue && colorChange.ColorNumber == 3)
+            if (_onPink && colorChange.ColorNumber == 3)
             {
                 return;
             }
-            if (_onWhite && colorChange.ColorNumber == 4)
+            if (_onBlue && colorChange.ColorNumber == 4)
+            {
+                return;
+            }
+            if (_onWhite && colorChange.ColorNumber == 5)
             {
                 return;
             }

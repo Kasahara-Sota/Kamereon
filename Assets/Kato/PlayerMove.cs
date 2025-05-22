@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     private Rigidbody2D _rb;
+    private Transform _tr;
 
     [SerializeField]
     private float _playerMoveSpeed;
@@ -14,6 +16,7 @@ public class PlayerMove : MonoBehaviour
     {
         //Rigidbodyコンポーネントを取得
         _rb = GetComponent<Rigidbody2D>();
+        _tr = transform;
     }
 
     // Update is called once per frame
@@ -24,5 +27,22 @@ public class PlayerMove : MonoBehaviour
 
         Vector2 velocity = new Vector2(h, v);
         _rb.velocity = velocity * _playerMoveSpeed;
+
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            transform.rotation = Quaternion.AngleAxis(90.0f, new Vector3(0, 0, 0));
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            transform.rotation = Quaternion.AngleAxis(90.0f, new Vector3(0, 0, 1));
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            transform.rotation = Quaternion.AngleAxis(90.0f, new Vector3(0, 0, -1));
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            transform.rotation = Quaternion.AngleAxis(180.0f, new Vector3(0, 0, 1));
+        }
     }
 }
