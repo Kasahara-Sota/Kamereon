@@ -2,18 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Respawn : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    private Transform _tr;
-    //‰ŠúˆÊ’u‚ğRespawnPosition‚Æ‚µ‚Äİ’è
-    Vector2 RespawnPosition = new Vector2();
+    public int health = 3;
+
+    
     // Start is called before the first frame update
     void Start()
     {
-
-        _tr = transform;
-
-        RespawnPosition = transform.localPosition;
+        
     }
 
     // Update is called once per frame
@@ -21,13 +18,19 @@ public class Respawn : MonoBehaviour
     {
         
     }
+    public void ModifyHealth(int amount)
+    {
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Light‚ÉÚG‚µ‚½‚ç‰ŠúˆÊ’u‚ÉˆÚ“®
         if(collision.gameObject.CompareTag("Light"))
         {
-            _tr.localPosition = RespawnPosition;
+            health -= 1;
         }
     }
 }
