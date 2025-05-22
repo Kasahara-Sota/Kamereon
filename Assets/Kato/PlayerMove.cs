@@ -16,7 +16,6 @@ public class PlayerMove : MonoBehaviour
     {
         //Rigidbodyコンポーネントを取得
         _rb = GetComponent<Rigidbody2D>();
-        _tr = transform;
     }
 
     // Update is called once per frame
