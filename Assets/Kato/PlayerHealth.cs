@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int health = 3;
     [SerializeField] ColorChange colorChange;
+    [SerializeField] UIManager UIManager;
     bool _onRed;
     bool _onYellow;
     bool _onPink;
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     public void ModifyHealth(int amount)
     {
         health -= amount;
+        UIManager.DegreeHeartUI();
         if (health <= 0)
         {
             Destroy(gameObject);
