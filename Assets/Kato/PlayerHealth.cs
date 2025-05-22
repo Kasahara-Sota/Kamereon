@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(CapsuleCollider2D))]
 public class PlayerHealth : MonoBehaviour
 {
     public int health = 3;
