@@ -23,6 +23,6 @@ public class PlayerMove : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         Vector2 velocity = new Vector2(h, v);
-        _rb.velocity = velocity * _playermovespeed;
+        _rb.velocity = velocity * _playermovespeed * Time.deltaTime;
     }
 }
