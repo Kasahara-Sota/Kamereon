@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     private Rigidbody2D _rb;
-    private Transform _tr;
 
     [SerializeField]
     private float _playerMoveSpeed;
