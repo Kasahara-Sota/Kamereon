@@ -12,7 +12,7 @@ public class ColorCange : MonoBehaviour
     {
         //Spriterendererコンポーネントを取得
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _spriteRenderer.color = Color.green;
+        _spriteRenderer.color = _colorArray[0];
     }
 
     // Update is called once per frame
@@ -20,11 +20,13 @@ public class ColorCange : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _spriteRenderer.color = _colorArray[(_index += 1) % _colorArray.Length];
+            _index = (_index + 1) % 3;
+            _spriteRenderer.color = _colorArray[_index];
         }
         if (Input.GetMouseButtonDown(1))
         {
-            _spriteRenderer.color = _colorArray[(_index -= 1) % _colorArray.Length];
+            _index = (_index - 1 + _colorArray.Length) % 3;
+            _spriteRenderer.color = _colorArray[_index];
         }
     }
 }
