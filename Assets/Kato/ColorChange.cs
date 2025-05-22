@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorCange : MonoBehaviour
+public class ColorChange : MonoBehaviour
 {
     [SerializeField] private Color[] _colorArray;
     int _index = 0;
+    public int ColorNumber => _index;
     SpriteRenderer _spriteRenderer;
     // Start is called before the first frame update
     void Start()
