@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class TitleScript2 : MonoBehaviour
 
 {
-    public void ClickStartButton() //‰Ÿ‚µ‚½‚ç•ÏX
+    public void ClickStartButton(string sceneName) //‰Ÿ‚µ‚½‚ç•ÏX
     {
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene(sceneName);
     }
 }
