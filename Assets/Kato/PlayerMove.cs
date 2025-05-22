@@ -1,15 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMove : MonoBehaviour
 {
-    public Transform _tr;
-    public Rigidbody2D _rb;
-
-
-    [SerializeField]
-    private Rigidbody2D _rigidbody2D;
+    private Rigidbody2D _rb;
 
     [SerializeField]
     private float _playermovespeed;
@@ -17,7 +12,6 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _tr = transform;
         _rb = GetComponent<Rigidbody2D>();
     }
 
