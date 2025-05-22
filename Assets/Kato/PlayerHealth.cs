@@ -40,19 +40,19 @@ public class PlayerHealth : MonoBehaviour
         {
             _onRed = true;
         }
-        if (collision.gameObject.CompareTag("Red"))
+        if (collision.gameObject.CompareTag("Yellow"))
         {
             _onYellow = true;
         }
-        if (collision.gameObject.CompareTag("Red"))
+        if (collision.gameObject.CompareTag("Pink"))
         {
             _onPink = true;
         }
-        if (collision.gameObject.CompareTag("Red"))
+        if (collision.gameObject.CompareTag("Blue"))
         {
             _onBlue = true;
         }
-        if (collision.gameObject.CompareTag("Red"))
+        if (collision.gameObject.CompareTag("White"))
         {
             _onWhite = true;
         }
@@ -60,23 +60,23 @@ public class PlayerHealth : MonoBehaviour
         {
             if (_onRed && colorChange.ColorNumber == 0)
             {
-
+                return;
             }
             if (_onYellow && colorChange.ColorNumber == 1)
             {
-
+                return;
             }
             if (_onPink && colorChange.ColorNumber == 2)
             {
-
+                return;
             }
             if (_onBlue && colorChange.ColorNumber == 3)
             {
-
+                return;
             }
             if (_onWhite && colorChange.ColorNumber == 4)
             {
-
+                return;
             }
             ModifyHealth(1);
         }
