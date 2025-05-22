@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
         Vector2 velocity = new Vector2(h, v);
         _rb.velocity = velocity * _playerMoveSpeed;
 
-        if(h != 0 && v != 0)
+        if(h != 0 || v != 0)
         {
             transform.up = velocity;
         }//“ü—Í‚ª‚ ‚Á‚½is•ûŒü‚ğŒü‚­
