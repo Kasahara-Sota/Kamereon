@@ -23,11 +23,13 @@ public class ColorChange : MonoBehaviour
         {
             _index = (_index + 1) % _colorArray.Length;
             _spriteRenderer.color = _colorArray[_index];
+            AudioManager.Instance.PlaySE("ColorChange");
         }
         if (Input.GetMouseButtonDown(1))
         {
             _index = (_index - 1 + _colorArray.Length) % _colorArray.Length;
             _spriteRenderer.color = _colorArray[_index];
+            AudioManager.Instance.PlaySE("ColorChange");
         }
     }
 }

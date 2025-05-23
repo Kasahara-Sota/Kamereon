@@ -45,9 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd332341f5a9ca42a79eefdaf1fcd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bgms: []
-  _ses: []
-  _firstPlayBGMName: 
+  _bgms:
+  - Name: SatgeBGM
+    Clip: {fileID: 8300000, guid: d7e6c7e86ea950c4bac8c9eed82c14c0, type: 3}
+  _ses:
+  - Name: PlayerWalk
+    Clip: {fileID: 8300000, guid: c8b0b93b9dca1e44982ba6bbbe8f5ab7, type: 3}
+  - Name: GameOverSE
+    Clip: {fileID: 8300000, guid: cbcd325a84a9af94d90d208747ac5f9d, type: 3}
+  - Name: EncountEnemy
+    Clip: {fileID: 8300000, guid: d661346f84326094ab4150fc6436ce89, type: 3}
+  - Name: ColorChange
+    Clip: {fileID: 8300000, guid: af73fbccaee35a742bc56b7ae772bb15, type: 3}
+  _firstPlayBGMName: SatgeBGM
 --- !u!82 &5554400454525872851
 AudioSource:
   m_ObjectHideFlags: 0

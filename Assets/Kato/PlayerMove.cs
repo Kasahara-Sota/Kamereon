@@ -6,11 +6,13 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     private Rigidbody2D _rb;
-
+    private AudioSource _audioSource;
     [SerializeField] private float _playerMoveSpeed;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.loop = true;
     }
     void Update()
     {
@@ -23,6 +25,14 @@ public class PlayerMove : MonoBehaviour
         if(h != 0 || v != 0)
         {
             transform.up = velocity;
+            if(!_audioSource.isPlaying)
+            {
+                _audioSource.Play();
+            }//‚Â‚¢‚Å‚É•à‚­‰¹‚ğ–Â‚ç‚·
         }//“ü—Í‚ª‚ ‚Á‚½is•ûŒü‚ğŒü‚­
+        else
+        {
+            _audioSource.Stop();
+        }
     }
 }

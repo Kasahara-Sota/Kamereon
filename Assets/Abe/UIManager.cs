@@ -16,9 +16,14 @@ public class UIManager : MonoBehaviour
     public void DegreeHeartUI()
     {
         Destroy(HeartIconsParent.GetChild(HeartIconsParent.childCount - 1).gameObject);
-        if(HeartIconsParent.childCount == 0)
+        if(HeartIconsParent.childCount <= 1)
         {
+            AudioManager.Instance.PlaySE("GameOverSE");
             ShowUI(GameOverUI);
+        }
+        else
+        {
+            AudioManager.Instance.PlaySE("EncountEnemy");
         }
     }
     public void ShowUI(GameObject gameObject)
