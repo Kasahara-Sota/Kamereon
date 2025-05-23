@@ -600,9 +600,9 @@ RectTransform:
   m_Children:
   - {fileID: 28323209}
   - {fileID: 974367931}
-  - {fileID: 1233646340}
   - {fileID: 511893947}
   - {fileID: 488959438}
+  - {fileID: 1363906262}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -835,7 +835,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025458442}
   m_CullTransparentMesh: 1
---- !u!1 &1233646339
+--- !u!1 &1363906261
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -843,37 +843,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1233646340}
-  - component: {fileID: 1233646341}
+  - component: {fileID: 1363906262}
+  - component: {fileID: 1363906263}
   m_Layer: 0
-  m_Name: gameover picture
+  m_Name: midorikame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1233646340
+--- !u!4 &1363906262
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233646339}
+  m_GameObject: {fileID: 1363906261}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -439.8, y: -211.14, z: 0}
-  m_LocalScale: {x: 0.47674, y: 0.47674, z: 0.47674}
+  m_LocalPosition: {x: -439.8, y: -211.33, z: 0}
+  m_LocalScale: {x: 0.48450166, y: 0.48450166, z: 0.48450166}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 774568622}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1233646341
+--- !u!212 &1363906263
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233646339}
+  m_GameObject: {fileID: 1363906261}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -908,7 +908,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c0ddd993689557b489afaf125214e700, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f86bd81840a63b74fb84d3ecf8dd94a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
