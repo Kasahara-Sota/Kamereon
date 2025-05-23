@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Light
   - GOAL
-  - Yello
+  - Green
+  - Blue
+  - Yellow
   layers:
   - Default
   - TransparentFX
