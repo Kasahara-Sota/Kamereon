@@ -207,6 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _colorArray:
   - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 1, g: 1, b: 0, a: 1}
 --- !u!82 &6999774958884120441
 AudioSource:
   m_ObjectHideFlags: 0
