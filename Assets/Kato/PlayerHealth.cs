@@ -13,18 +13,6 @@ public class PlayerHealth : MonoBehaviour
     bool _onBlue;
     bool _onWhite;
     bool _onGreen;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ModifyHealth(int amount)
     {
         health -= amount;
@@ -34,8 +22,7 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Green"))
         {
@@ -88,6 +75,33 @@ public class PlayerHealth : MonoBehaviour
                 return;
             }
             ModifyHealth(1);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Green"))
+        {
+            _onGreen = false;
+        }
+        if (collision.gameObject.CompareTag("Red"))
+        {
+            _onRed = false;
+        }
+        if (collision.gameObject.CompareTag("Yellow"))
+        {
+            _onYellow = false;
+        }
+        if (collision.gameObject.CompareTag("Pink"))
+        {
+            _onPink = false;
+        }
+        if (collision.gameObject.CompareTag("Blue"))
+        {
+            _onBlue = false;
+        }
+        if (collision.gameObject.CompareTag("White"))
+        {
+            _onWhite = false;
         }
     }
 }
