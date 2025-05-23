@@ -10,7 +10,6 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _playerMoveSpeed;
     void Start()
     {
-        //Rigidbodyコンポーネントを取得
         _rb = GetComponent<Rigidbody2D>();
         _audioSource = GetComponent<AudioSource>();
         _audioSource.loop = true;
@@ -20,7 +19,7 @@ public class PlayerMove : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        Vector2 velocity = new Vector2(h, v);
+        Vector2 velocity = new Vector2(h, v).normalized;
         _rb.velocity = velocity * _playerMoveSpeed;
 
         if(h != 0 || v != 0)

@@ -4,17 +4,21 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 3;
-    [SerializeField] ColorChange colorChange;
+    public int Health = 3;
+    [SerializeField] ColorChange _colorChange;
     [SerializeField] UIManager UIManager;
     bool _onYellow;
     bool _onBlue;
     bool _onGreen;
+    /// <summary>
+    /// health�����炷����
+    /// </summary>
+    /// <param name="amount"></param>
     public void ModifyHealth(int amount)
     {
-        health -= amount;
+        Health -= amount;
         UIManager.DegreeHeartUI();
-        if (health <= 0)
+        if (Health <= 0)
         {
             gameObject.SetActive(false);
         }
@@ -35,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Light"))
         {
-            if (_onGreen && colorChange.ColorNumber == 0)
+            if (_onGreen && _colorChange.ColorNumber == 0)
             {
                 return;
             }
@@ -43,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 return;
             }
-            if (_onYellow && colorChange.ColorNumber == 2)
+            if (_onYellow && _colorChange.ColorNumber == 2)
             {
                 return;
             }
