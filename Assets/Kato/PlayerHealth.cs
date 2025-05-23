@@ -4,8 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 3;
-    [SerializeField] ColorChange colorChange;
+    public int Health = 3;
+    [SerializeField] ColorChange _colorChange;
     [SerializeField] UIManager UIManager;
     bool _onRed;
     bool _onYellow;
@@ -13,11 +13,15 @@ public class PlayerHealth : MonoBehaviour
     bool _onBlue;
     bool _onWhite;
     bool _onGreen;
+    /// <summary>
+    /// healthÇå∏ÇÁÇ∑èàóù
+    /// </summary>
+    /// <param name="amount"></param>
     public void ModifyHealth(int amount)
     {
-        health -= amount;
+        Health -= amount;
         UIManager.DegreeHeartUI();
-        if (health <= 0)
+        if (Health <= 0)
         {
             Destroy(gameObject);
         }
@@ -50,27 +54,27 @@ public class PlayerHealth : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Light"))
         {
-            if (_onGreen && colorChange.ColorNumber == 0)
+            if (_onGreen && _colorChange.ColorNumber == 0)
             {
                 return;
             }
-            if (_onRed && colorChange.ColorNumber == 1)
+            if (_onRed && _colorChange.ColorNumber == 1)
             {
                 return;
             }
-            if (_onYellow && colorChange.ColorNumber == 2)
+            if (_onYellow && _colorChange.ColorNumber == 2)
             {
                 return;
             }
-            if (_onPink && colorChange.ColorNumber == 3)
+            if (_onPink && _colorChange.ColorNumber == 3)
             {
                 return;
             }
-            if (_onBlue && colorChange.ColorNumber == 4)
+            if (_onBlue && _colorChange.ColorNumber == 4)
             {
                 return;
             }
-            if (_onWhite && colorChange.ColorNumber == 5)
+            if (_onWhite && _colorChange.ColorNumber == 5)
             {
                 return;
             }
