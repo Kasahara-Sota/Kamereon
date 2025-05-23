@@ -16,8 +16,8 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
 
         Vector2 velocity = new Vector2(h, v).normalized;
         _rb.velocity = velocity * _playerMoveSpeed;

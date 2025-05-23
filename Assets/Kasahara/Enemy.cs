@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     {
         public ActionType Type;
         public Direction Dir;
-        public int Duration;
+        public float Duration;
     }
     void Start()
     {

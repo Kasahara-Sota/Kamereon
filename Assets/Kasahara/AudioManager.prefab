@@ -48,6 +48,8 @@ MonoBehaviour:
   _bgms:
   - Name: SatgeBGM
     Clip: {fileID: 8300000, guid: d7e6c7e86ea950c4bac8c9eed82c14c0, type: 3}
+  - Name: TitleBGM
+    Clip: {fileID: 8300000, guid: 26bfef680caa1d347a9315abcd8be54b, type: 3}
   _ses:
   - Name: PlayerWalk
     Clip: {fileID: 8300000, guid: c8b0b93b9dca1e44982ba6bbbe8f5ab7, type: 3}
@@ -57,7 +59,9 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: d661346f84326094ab4150fc6436ce89, type: 3}
   - Name: ColorChange
     Clip: {fileID: 8300000, guid: af73fbccaee35a742bc56b7ae772bb15, type: 3}
-  _firstPlayBGMName: SatgeBGM
+  - Name: Button
+    Clip: {fileID: 8300000, guid: 02668edcff7e19241b318355936c363d, type: 3}
+  _firstPlayBGMName: TitleBGM
 --- !u!82 &5554400454525872851
 AudioSource:
   m_ObjectHideFlags: 0

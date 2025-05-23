@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColorChange : MonoBehaviour
 {
     [SerializeField] private Color[] _colorArray;
+    private PlayerHealth _playerHealth;
     int _index = 0;
     public int ColorNumber => _index;
     SpriteRenderer _spriteRenderer;
@@ -14,6 +15,7 @@ public class ColorChange : MonoBehaviour
         //Spriterendererコンポーネントを取得
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.color = _colorArray[0];
+        _playerHealth = GetComponent<PlayerHealth>();   
     }
 
     // Update is called once per frame
@@ -24,12 +26,14 @@ public class ColorChange : MonoBehaviour
             _index = (_index + 1) % _colorArray.Length;
             _spriteRenderer.color = _colorArray[_index];
             AudioManager.Instance.PlaySE("ColorChange");
+            _playerHealth.CheckLight();
         }
         if (Input.GetMouseButtonDown(1))
         {
             _index = (_index - 1 + _colorArray.Length) % _colorArray.Length;
             _spriteRenderer.color = _colorArray[_index];
             AudioManager.Instance.PlaySE("ColorChange");
+            _playerHealth.CheckLight();
         }
     }
 }

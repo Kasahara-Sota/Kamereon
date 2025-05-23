@@ -172,7 +172,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -190,8 +190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cb054e4a46aabd43ae79b09a5b26687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  colorChange: {fileID: 896030112458474966}
+  Health: 3
+  _colorChange: {fileID: 0}
+  _respawn: {fileID: 0}
   UIManager: {fileID: 0}
 --- !u!114 &896030112458474966
 MonoBehaviour:

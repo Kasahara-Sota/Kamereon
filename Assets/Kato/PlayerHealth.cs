@@ -6,10 +6,12 @@ public class PlayerHealth : MonoBehaviour
 {
     public int Health = 3;
     [SerializeField] ColorChange _colorChange;
+    [SerializeField] Respawn _respawn;
     [SerializeField] UIManager UIManager;
     bool _onYellow;
     bool _onBlue;
     bool _onGreen;
+    bool _onLight;
     /// <summary>
     /// health�����炷����
     /// </summary>
@@ -22,6 +24,27 @@ public class PlayerHealth : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+    public void CheckLight()
+    {
+        if (!_onLight)
+        {
+            return;
+        }
+        if (_onGreen && _colorChange.ColorNumber == 0)
+        {
+            return;
+        }
+        if (_onBlue && _colorChange.ColorNumber == 1)
+        {
+            return;
+        }
+        if (_onYellow && _colorChange.ColorNumber == 2)
+        {
+            return;
+        }
+        ModifyHealth(1);
+        _respawn.PlayerRespawn();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,19 +62,8 @@ public class PlayerHealth : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Light"))
         {
-            if (_onGreen && _colorChange.ColorNumber == 0)
-            {
-                return;
-            }
-            if (_onBlue && colorChange.ColorNumber == 1)
-            {
-                return;
-            }
-            if (_onYellow && _colorChange.ColorNumber == 2)
-            {
-                return;
-            }
-            ModifyHealth(1);
+            _onLight = true;
+            CheckLight();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -67,6 +79,10 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Yellow"))
         {
             _onYellow = false;
+        }
+        if(collision.gameObject.CompareTag("Light"))
+        {
+            _onLight = false;
         }
     }
 }
