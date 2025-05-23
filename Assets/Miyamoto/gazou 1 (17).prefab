@@ -1774,7 +1774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441524656659210209}
   - component: {fileID: 7194091505396080509}
-  - component: {fileID: -2240600168175977653}
+  - component: {fileID: -6239947737266568705}
   m_Layer: 0
   m_Name: gazou 1 (17)
   m_TagString: Untagged
@@ -1871,7 +1871,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: b532e66497dbce0449d785c70ab256c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1883,8 +1883,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-2240600168175977653
-CircleCollider2D:
+--- !u!61 &-6239947737266568705
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1912,12 +1912,22 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.31, y: 0.31}
+    newSize: {x: 0.31, y: 0.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.155
+  m_Size: {x: 0.31, y: 0.31}
+  m_EdgeRadius: 0
 --- !u!1 &5174124404976957610
 GameObject:
   m_ObjectHideFlags: 0
